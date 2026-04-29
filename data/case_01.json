@@ -1,0 +1,46 @@
+{
+  "case_title": "Case 01: Midnight Manuscript",
+  "hero_name": "Kari",
+  "intro": "At 23:40, writer Lin was found unconscious in the archive room. Kari must uncover who altered the manuscript and why.",
+  "suspects": [
+    {
+      "name": "Ivy",
+      "motive": "Contract dispute with the victim.",
+      "alibi": "Claims she stayed in the lobby all night.",
+      "is_culprit": false
+    },
+    {
+      "name": "Noah",
+      "motive": "Wanted to expose plagiarism in the manuscript.",
+      "alibi": "Says he was fixing stage lights at 23:30.",
+      "is_culprit": true
+    },
+    {
+      "name": "Rin",
+      "motive": "Fear of losing editorial authority.",
+      "alibi": "Claims she never entered the archive room.",
+      "is_culprit": false
+    }
+  ],
+  "clues": [
+    {
+      "id": "broken_bulb",
+      "title": "Broken Bulb",
+      "desc": "A shattered bulb was found near the archive switchboard.",
+      "implicates": "Noah"
+    },
+    {
+      "id": "ink_stain",
+      "title": "Ink Stain",
+      "desc": "Fresh blue ink appears on a maintenance glove.",
+      "implicates": "Noah"
+    },
+    {
+      "id": "lobby_camera",
+      "title": "Lobby Camera Gap",
+      "desc": "The lobby camera skipped 10 minutes during the incident.",
+      "implicates": "Ivy"
+    }
+  ],
+  "correct_answer": "Noah"
+}

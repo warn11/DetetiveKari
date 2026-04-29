@@ -1,0 +1,78 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8q0x4u2t7k11"]
+
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_4fnd2"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4fnd2")
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Title" type="Label" parent="Margin/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "Kari - Case"
+
+[node name="Story" type="RichTextLabel" parent="Margin/VBox"]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+bbcode_enabled = false
+fit_content = true
+scroll_active = false
+text = "Story intro"
+
+[node name="Clues" type="RichTextLabel" parent="Margin/VBox"]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+fit_content = true
+scroll_active = false
+text = "Discovered clues"
+
+[node name="Suspects" type="VBoxContainer" parent="Margin/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Actions" type="HBoxContainer" parent="Margin/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Inspect" type="Button" parent="Margin/VBox/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Inspect Scene"
+
+[node name="Deduce" type="Button" parent="Margin/VBox/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Make Deduction"
+
+[node name="Reset" type="Button" parent="Margin/VBox/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Reset Case"
+
+[node name="Log" type="RichTextLabel" parent="Margin/VBox"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+fit_content = true
+scroll_active = false
+text = "Log"
