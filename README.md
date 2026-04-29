@@ -1,5 +1,8 @@
-# Detective Kari (Godot)
+# DetetiveKari
 
+An AI detective game project based on the Godot engine.
+
+## Detective Kari (Godot)
 Single-player detective story prototype built with Godot 4.
 
 ## Features
