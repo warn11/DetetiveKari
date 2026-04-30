@@ -1,46 +1,69 @@
 {
-  "case_title": "Case 01: Midnight Manuscript",
-  "hero_name": "Kari",
-  "intro": "At 23:40, writer Lin was found unconscious in the archive room. Kari must uncover who altered the manuscript and why.",
+  "case_title": "第一章：午夜手稿",
+  "hero_name": "卡里",
+  "intro": "23:40，作家林岚在档案室昏迷。唯一的原稿被篡改，卡里必须在天亮前锁定真凶。",
+  "dialogue": [
+    {
+      "speaker": "旁白",
+      "text": "雨夜，出版社封楼。卡里抵达案发现场。"
+    },
+    {
+      "speaker": "卡里",
+      "text": "先确认现场，再问人。谁最急着让原稿消失？"
+    },
+    {
+      "speaker": "前台",
+      "text": "停电前十分钟，三名嫌疑人都在楼内。"
+    }
+  ],
   "suspects": [
     {
-      "name": "Ivy",
-      "motive": "Contract dispute with the victim.",
-      "alibi": "Claims she stayed in the lobby all night.",
-      "is_culprit": false
+      "name": "艾薇",
+      "motive": "合同分成谈崩，担心新作签约失败。",
+      "alibi": "自称全程在大厅等车。"
     },
     {
-      "name": "Noah",
-      "motive": "Wanted to expose plagiarism in the manuscript.",
-      "alibi": "Says he was fixing stage lights at 23:30.",
-      "is_culprit": true
+      "name": "诺亚",
+      "motive": "想揭露抄袭，但担心证据不足被反咬。",
+      "alibi": "称自己在23:30维修舞台灯。"
     },
     {
-      "name": "Rin",
-      "motive": "Fear of losing editorial authority.",
-      "alibi": "Claims she never entered the archive room.",
-      "is_culprit": false
+      "name": "凛",
+      "motive": "害怕编辑权被剥夺。",
+      "alibi": "说自己没有进过档案室。"
     }
   ],
   "clues": [
     {
       "id": "broken_bulb",
-      "title": "Broken Bulb",
-      "desc": "A shattered bulb was found near the archive switchboard.",
-      "implicates": "Noah"
+      "title": "碎裂灯泡",
+      "desc": "配电箱旁有刚碎的舞台灯泡碎片，型号仅维修组常用。",
+      "implicates": "诺亚"
     },
     {
       "id": "ink_stain",
-      "title": "Ink Stain",
-      "desc": "Fresh blue ink appears on a maintenance glove.",
-      "implicates": "Noah"
+      "title": "蓝墨手套",
+      "desc": "维修手套沾有新鲜蓝墨，与被篡改页边批注一致。",
+      "implicates": "诺亚"
     },
     {
-      "id": "lobby_camera",
-      "title": "Lobby Camera Gap",
-      "desc": "The lobby camera skipped 10 minutes during the incident.",
-      "implicates": "Ivy"
+      "id": "camera_gap",
+      "title": "监控断档",
+      "desc": "大厅监控在23:34到23:44丢失画面，艾薇的不在场证明不稳。",
+      "implicates": "艾薇"
+    },
+    {
+      "id": "door_mark",
+      "title": "门框擦痕",
+      "desc": "档案室门框有工具箱金属擦痕，方向由外向内。",
+      "implicates": "诺亚"
     }
   ],
-  "correct_answer": "Noah"
+  "deduction": {
+    "correct_suspect": "诺亚",
+    "correct_motive": "掩盖揭露失败风险",
+    "correct_method": "制造停电后潜入篡改",
+    "success_text": "卡里还原真相：诺亚为确保揭露行动成功，先制造短时停电潜入档案室篡改页码，试图把嫌疑引向合同纠纷。",
+    "failure_text": "卡里的推理仍有缺口，关键矛盾未闭合。真凶借夜色拖延了调查。"
+  }
 }

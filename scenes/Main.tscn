@@ -16,63 +16,141 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 24.0
-offset_top = 24.0
-offset_right = -24.0
-offset_bottom = -24.0
+offset_left = 18.0
+offset_top = 18.0
+offset_right = -18.0
+offset_bottom = -18.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBox" type="VBoxContainer" parent="Margin"]
 layout_mode = 2
-theme_override_constants/separation = 14
+theme_override_constants/separation = 8
 
 [node name="Title" type="Label" parent="Margin/VBox"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 34
-text = "Kari - Case"
+theme_override_font_sizes/font_size = 32
+text = "卡里 - 第一章"
 
 [node name="Story" type="RichTextLabel" parent="Margin/VBox"]
-custom_minimum_size = Vector2(0, 140)
+custom_minimum_size = Vector2(0, 72)
 layout_mode = 2
-bbcode_enabled = false
 fit_content = true
 scroll_active = false
-text = "Story intro"
 
-[node name="Clues" type="RichTextLabel" parent="Margin/VBox"]
-custom_minimum_size = Vector2(0, 180)
+[node name="SceneArea" type="PanelContainer" parent="Margin/VBox"]
+custom_minimum_size = Vector2(0, 260)
+layout_mode = 2
+
+[node name="SceneRoot" type="Control" parent="Margin/VBox/SceneArea"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SceneLabel" type="Label" parent="Margin/VBox/SceneArea/SceneRoot"]
+layout_mode = 1
+offset_left = 16.0
+offset_top = 14.0
+offset_right = 360.0
+offset_bottom = 40.0
+text = "2D现场：点击发光点调查"
+
+[node name="HotspotBulb" type="Button" parent="Margin/VBox/SceneArea/SceneRoot"]
+layout_mode = 1
+offset_left = 180.0
+offset_top = 120.0
+offset_right = 330.0
+offset_bottom = 160.0
+text = "灯泡碎片"
+
+[node name="HotspotGlove" type="Button" parent="Margin/VBox/SceneArea/SceneRoot"]
+layout_mode = 1
+offset_left = 500.0
+offset_top = 170.0
+offset_right = 650.0
+offset_bottom = 210.0
+text = "沾墨手套"
+
+[node name="HotspotCamera" type="Button" parent="Margin/VBox/SceneArea/SceneRoot"]
+layout_mode = 1
+offset_left = 760.0
+offset_top = 70.0
+offset_right = 930.0
+offset_bottom = 110.0
+text = "监控终端"
+
+[node name="HotspotDoor" type="Button" parent="Margin/VBox/SceneArea/SceneRoot"]
+layout_mode = 1
+offset_left = 970.0
+offset_top = 150.0
+offset_right = 1120.0
+offset_bottom = 190.0
+text = "门框擦痕"
+
+[node name="Dialogue" type="RichTextLabel" parent="Margin/VBox"]
+custom_minimum_size = Vector2(0, 66)
 layout_mode = 2
 fit_content = true
 scroll_active = false
-text = "Discovered clues"
 
 [node name="Suspects" type="VBoxContainer" parent="Margin/VBox"]
 layout_mode = 2
-theme_override_constants/separation = 6
+theme_override_constants/separation = 4
+
+[node name="Clues" type="RichTextLabel" parent="Margin/VBox"]
+custom_minimum_size = Vector2(0, 115)
+layout_mode = 2
+fit_content = true
+scroll_active = false
+
+[node name="DeductionPanel" type="GridContainer" parent="Margin/VBox"]
+layout_mode = 2
+columns = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 6
+
+[node name="SuspectLabel" type="Label" parent="Margin/VBox/DeductionPanel"]
+layout_mode = 2
+text = "嫌疑人"
+
+[node name="SuspectPick" type="OptionButton" parent="Margin/VBox/DeductionPanel"]
+layout_mode = 2
+
+[node name="MotiveLabel" type="Label" parent="Margin/VBox/DeductionPanel"]
+layout_mode = 2
+text = "动机"
+
+[node name="MotivePick" type="OptionButton" parent="Margin/VBox/DeductionPanel"]
+layout_mode = 2
+
+[node name="MethodLabel" type="Label" parent="Margin/VBox/DeductionPanel"]
+layout_mode = 2
+text = "作案手法"
+
+[node name="MethodPick" type="OptionButton" parent="Margin/VBox/DeductionPanel"]
+layout_mode = 2
 
 [node name="Actions" type="HBoxContainer" parent="Margin/VBox"]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="Inspect" type="Button" parent="Margin/VBox/Actions"]
+[node name="DialogueNext" type="Button" parent="Margin/VBox/Actions"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Inspect Scene"
+text = "推进对话"
 
 [node name="Deduce" type="Button" parent="Margin/VBox/Actions"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Make Deduction"
+text = "提交推理"
 
 [node name="Reset" type="Button" parent="Margin/VBox/Actions"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Reset Case"
+text = "重开案件"
 
 [node name="Log" type="RichTextLabel" parent="Margin/VBox"]
-custom_minimum_size = Vector2(0, 80)
+custom_minimum_size = Vector2(0, 65)
 layout_mode = 2
 fit_content = true
 scroll_active = false
-text = "Log"
